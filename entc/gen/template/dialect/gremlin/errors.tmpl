@@ -39,7 +39,7 @@ func NewErrUniqueField(label, field string, v any) *ConstraintError {
 }
 
 // NewErrUniqueEdge creates a constraint error for unique edges.
-func NewErrUniqueEdge(label, edge, id string) *ConstraintError {
+func NewErrUniqueEdge(label, edge, id any) *ConstraintError {
 	return &ConstraintError{msg: fmt.Sprintf("edge %s.%s with id: %#v", label, edge, id)}
 }
 
